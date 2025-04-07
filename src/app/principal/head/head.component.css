@@ -1,13 +1,25 @@
 /* Estilos para la barra lateral */
+.container {
+  position: relative;
+}
+
 .sidebar {
-  position: fixed; /* Esto asegura que la barra lateral se quede fija */
-  top: 0; /* Se posiciona en la parte superior */
-  left: 0; /* Se posiciona a la izquierda */
-  width: 250px; /* Ajusta el ancho de la barra lateral */
-  height: fit-content; /* Hace que ocupe toda la altura de la pantalla */
-  padding: 20px; /* Espaciado interno */
-  box-sizing: border-box; /* Asegura que el padding no afecte al tamaño total */
-  z-index: 1000; /* Asegura que la barra lateral se superponga al contenido */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  color: rgb(0, 0, 0);
+  z-index: 0; /* Barra lateral está debajo del contenido */
+}
+
+.content {
+  position: absolute; 
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  z-index: 1; /* El contenido está por encima de la barra lateral */
 }
 
 .sidebar h2 {
@@ -35,9 +47,6 @@
 }
 
 /* Estilo para hacer que el contenido principal no quede debajo de la barra lateral */
-main {
-  margin-left: 250px; /* Añade un margen izquierdo para que no se solape con la barra lateral */
-  padding: 20px; /* Espaciado dentro del área principal */
-}
+
 .links{text-decoration: none;
 color: black;}

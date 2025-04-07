@@ -1,0 +1,58 @@
+<body>
+  <main class="main-content">
+    <app-head></app-head>
+    <div class="flex-container">
+      <div class="container-data">
+          <h3 class="section-heading">Gestión de empleados</h3>
+          <div class="mgmtContainer">
+
+            <!-- Info Card -->
+            <div class="card">
+              <svg height="48" viewBox="0 0 48 48" width="48" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 0h48v48h-48z" fill="none" />
+                <path
+                d="M22 34h4v-12h-4v12zm2-30c-11.05 0-20 8.95-20 20s8.95 20 20 20 20-8.95 20-20-8.95-20-20-20zm0 36c-8.82 0-16-7.18-16-16s7.18-16 16-16 16 7.18 16 16-7.18 16-16 16zm-2-22h4v-4h-4v4z" />
+              </svg>
+              <h3>Añadir empleado</h3>
+              <p class="subtitle">Añadir empleado, pulsando sobre añadir podremos crear un nuevo usuario para la empresa.
+              </p>
+              <button class="dark-btn">Crear</button>
+            </div>
+            <div class="card">
+              <svg height="48" viewBox="0 0 48 48" width="48" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 0h48v48h-48z" fill="none" />
+              <path
+                d="M22 34h4v-12h-4v12zm2-30c-11.05 0-20 8.95-20 20s8.95 20 20 20 20-8.95 20-20-8.95-20-20-20zm0 36c-8.82 0-16-7.18-16-16s7.18-16 16-16 16 7.18 16 16-7.18 16-16 16zm-2-22h4v-4h-4v4z" />
+            </svg>
+            <h3>Eliminar empleado</h3>
+            <p class="subtitle">Eliminar un empleado de la empresa, poniendo unicamente su ID o nombre.</p>
+            <button class="dark-btn">Eliminar</button>
+          </div>
+          </div>
+        </div>
+        <div class="container-data">
+          <h3>Empleados en línea</h3>
+          <p class="subtitle">Aquí se verían los usuarios y el tiempo que llevan en línea y si se encuentran activos o
+            inactivos (Tiempo de descanso)</p>
+          <div class="card-container-wrapper">
+            <div class="card-container" *ngFor="let emp of empleados">
+              <div class="card-header">
+                <svg class="icon" height="48" viewBox="0 0 48 48" width="48" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 0h48v48h-48z" fill="none" />
+                  <path
+                    d="M22 34h4v-12h-4v12zm2-30c-11.05 0-20 8.95-20 20s8.95 20 20 20 20-8.95 20-20-8.95-20-20-20zm0 36c-8.82 0-16-7.18-16-16s7.18-16 16-16 16 7.18 16 16-7.18 16-16 16zm-2-22h4v-4h-4v4z" />
+                </svg>
+                <h3>{{emp?.nombre}} {{emp?.apellido}}</h3>
+              </div>
+              <div class="card-content">
+                <p class="subtitle">Tiempo en línea: </p>
+                <p class="subtitle">Correo: {{emp?.correo}}</p>
+                <p class="subtitle">Estado: </p>
+                <p class="subtitle">Grupo: </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </main>
+</body>

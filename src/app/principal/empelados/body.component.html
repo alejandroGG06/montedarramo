@@ -7,13 +7,13 @@
   <!-- Sección del empleado -->
   <div class="employee-section">
     <div class="employee-info">
-      <img [src]="empleado.foto" alt="Empleado" class="employee-avatar" />
+      <img *ngIf="empleado?.foto" [src]="empleado?.foto" alt="Foto de perfil" />      
       <div class="info-box">
         <i class="icon">ℹ️</i>
-        <h3>{{empleado.nombre}}</h3>
-        <p>{{empleado.apellido}}</p>
-        <p>{{empleado.roll}}</p>
-        <p>{{empleado.correo}}</p>
+        <h3>{{empleado?.nombre}}</h3>
+        <p>{{empleado?.apellido}}</p>
+        <p>{{empleado?.roll}}</p>
+        <p>{{empleado?.correo}}</p>
       </div>
     </div>
       <!-- Sección de trabajo -->
@@ -23,10 +23,10 @@
   <!-- Sección de equipo -->
   <div class="team-section">
     <div class="team-card" *ngFor="let emp of empleados">
-      <img [src]="emp.foto" alt="">
-      <p>{{emp.nombre}}</p>
-      <p>{{emp.apellido}}</p>
-      <p>{{emp.correo}}</p>
+      <img [src]="emp?.foto" alt="">
+      <p>{{emp?.nombre}}</p>
+      <p>{{emp?.apellido}}</p>
+      <p>{{emp?.correo}}</p>
     </div>
   </div>
 </div>

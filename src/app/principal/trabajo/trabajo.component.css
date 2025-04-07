@@ -1,0 +1,65 @@
+
+
+.complete {
+    border-radius: 8px; /* Bordes redondeados */
+    background-color:#f5f5f5; /* Color de fondo */
+    padding: 20px; /* Espaciado interno */
+    margin: 20px; /* Espaciado externo */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+    width: 200%; /* Ancho del box, ajusta según sea necesario */
+    display: inline-block; /* Permite que el box esté en línea con otros elementos */
+    vertical-align: top; /* Alineación vertical en línea */
+}
+
+.work-time, .pause-time {
+    display: center; /* Usar flexbox para alinear los elementos */
+    align-items: center; /* Centrar verticalmente */
+    margin-bottom: 15px; /* Espaciado entre secciones */
+}
+
+.icon {
+    font-size: 24px; /* Tamaño del icono */
+    margin-right: 10px; /* Espaciado entre el icono y el texto */
+}
+
+
+
+.work-controls {
+    margin-top: 20px; /* Espaciado superior para separar controles */
+}
+
+button {
+    padding: 10px 15px; /* Espaciado interno del botón */
+    margin-right: 10px; /* Espaciado entre botones */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: #505050; /* Color de fondo del botón */
+    color: #f5f5f5; /* Color del texto del botón */
+    cursor: pointer; /* Cambiar cursor al pasar sobre el botón */
+    transition: background-color 0.3s; /* Transición suave para el color de fondo */
+}
+
+button:hover {
+    background-color: #0056b3; /* Color de fondo al pasar el mouse */
+}
+
+.progress-bar {
+    margin: 10px 0; /* Espaciado vertical entre barras de progreso */
+}
+
+.bar {
+    background-color: #e0e0e0; /* Color de fondo de la barra */
+    border-radius: 5px; /* Bordes redondeados */
+    overflow: hidden; /* Ocultar el contenido que se desborda */
+}
+
+.progress {
+    height: 10px; /* Altura de la barra de progreso */
+    background-color: #4caf50; /* Color de la barra de progreso */
+    width: 0; /* Ancho inicial de la barra de progreso */
+    transition: width 0.5s; /* Transición suave para el ancho */
+}
+
+.pause {
+    background-color: #ff9800; /* Color de la barra de pausa */
+}

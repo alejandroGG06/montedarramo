@@ -1,0 +1,14 @@
+header{
+    text-align: center;
+    font-family:sans-serif;
+    font-style: unset;   
+  }
+  a{
+    padding:10px;
+    color: black;
+    text-decoration: none;
+  }
+  
+  img{height: 40px; width: 40px;
+  align-items: end; }
+  

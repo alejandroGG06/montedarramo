@@ -41,6 +41,49 @@ body {
 .section-headings {
   text-align: left;
 }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #ffffff;
+}
+
+.user-avatar{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: inline;
+
+}
+/* Layout Structure */
+.layout-container {
+  display: flex;
+}
+
+
+
+/* Main content */
+.main-content {
+  flex: 1;
+  padding: 40px;
+  text-align: center;
+}
+
+.main-content h1 {
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+.top-section {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.section-headings {
+  text-align: left;
+}
 
 
 .avatar-large {

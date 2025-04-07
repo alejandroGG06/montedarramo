@@ -1,40 +1,53 @@
- <body>
-  <app-head></app-head>
+<body>
+  <main class="main-content">
+    <app-head></app-head> 
 
-    
-  
-<div class="dashboard-container">
-  <!-- Sección del empleado -->
-  <div class="employee-section">
-    <div class="employee-info">
-      <img *ngIf="empleado?.foto" [src]="empleado?.foto" alt="Foto de perfil" />      
-      <div class="info-box">
-        <i class="icon">ℹ️</i>
-        <h3>{{empleado?.nombre}}</h3>
-        <p>{{empleado?.apellido}}</p>
-        <p>{{empleado?.roll}}</p>
+    <div class="top-section">
+      <!-- Avatar -->
+      <img [src]="empleado?.foto" class="avatar-large" alt="Empleado" />
+
+      <!-- Info Card -->
+      <div class="card">
+        <svg height="48" viewBox="0 0 48 48" width="48" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h48v48h-48z" fill="none"/><path d="M22 34h4v-12h-4v12zm2-30c-11.05 0-20 8.95-20 20s8.95 20 20 20 20-8.95 20-20-8.95-20-20-20zm0 36c-8.82 0-16-7.18-16-16s7.18-16 16-16 16 7.18 16 16-7.18 16-16 16zm-2-22h4v-4h-4v4z"/></svg>
+        <h3>{{empleado?.nombre}} {{empleado?.apellido}}</h3>
         <p>{{empleado?.correo}}</p>
+        <p>{{empleado?.roll}}</p>
       </div>
-    </div>
-      <!-- Sección de trabajo -->
+
+      <!-- Work Time -->
+      <div class="card">
+        <svg width="40" height="40" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1{fill:#232323;}</style></defs><path class="cls-1" d="M12,0A12,12,0,1,0,24,12,12.013,12.013,0,0,0,12,0Zm0,22A10,10,0,1,1,22,12,10.011,10.011,0,0,1,12,22Z"/><path class="cls-1" d="M13,11.586V6a1,1,0,0,0-2,0v6a1,1,0,0,0,.293.707l3,3a1,1,0,0,0,1.414-1.414Z"/></svg>
+        <h3>8</h3>
+        <p>Tiempo de trabajo</p>
+      </div>
+
+      <!-- Pause Time -->
+      <div class="card">
+        <svg viewBox="0 0 24 24" width="40" height="40" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1{fill:#232323;}</style></defs><path class="cls-1" d="M12,0A12,12,0,1,0,24,12,12.013,12.013,0,0,0,12,0Zm0,22A10,10,0,1,1,22,12,10.011,10.011,0,0,1,12,22Z"/><path class="cls-1" d="M13,11.586V6a1,1,0,0,0-2,0v6a1,1,0,0,0,.293.707l3,3a1,1,0,0,0,1.414-1.414Z"/></svg>
+        <h3>1</h3>
+        <p>Tiempo de pausa</p>
+      </div>
   
+    </div>
     <app-trabajo></app-trabajo>
   
-  <!-- Sección de equipo -->
-  <div class="team-section">
-    <div class="team-card" *ngFor="let emp of empleados">
-      <img [src]="emp?.foto" alt="">
-      <p>{{emp?.nombre}}</p>
-      <p>{{emp?.apellido}}</p>
-      <p>{{emp?.correo}}</p>
-    </div>
-  </div>
-</div>
-</div>
+    <section class="team-section">
+      <h2 class="section-headings">Equipo</h2>
+      <div class="team-grid">
+        <div class="team-card" *ngFor="let emp of empleados">
+          <h3>{{emp?.nombre}} {{emp?.apellido}}</h3>
+          <div class="emp-info">
+            <img [src]="emp?.foto" class="team-avatar"/>
+            <div class="emp-data">
+              <p class="emp-role">{{emp?.roll}}</p>
+              <p class="emp-desc">{{emp?.correo}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+ 
+  
 </body>
-
-
-
-  
-
-  

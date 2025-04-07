@@ -1,14 +1,42 @@
-header{
-    text-align: center;
-    font-family:sans-serif;
-    font-style: unset;   
-  }
-  a{
-    padding:10px;
-    color: black;
-    text-decoration: none;
-  }
-  
-  img{height: 40px; width: 40px;
-  align-items: end; }
-  
+/* Estilos para la barra lateral */
+.sidebar {
+  position: fixed; /* Esto asegura que la barra lateral se quede fija */
+  top: 0; /* Se posiciona en la parte superior */
+  left: 0; /* Se posiciona a la izquierda */
+  width: 250px; /* Ajusta el ancho de la barra lateral */
+  height: fit-content; /* Hace que ocupe toda la altura de la pantalla */
+  color: black; /* Color del texto */
+  padding: 20px; /* Espaciado interno */
+  box-sizing: border-box; /* Asegura que el padding no afecte al tamaño total */
+  z-index: 1000; /* Asegura que la barra lateral se superponga al contenido */
+}
+
+.sidebar h2 {
+  margin-top: 0;
+  color:black;
+}
+
+/* Estilo para los elementos de la lista de navegación */
+.sidebar nav ul {
+  list-style-type: none; /* Elimina los puntos de las listas */
+  padding-left: 0;
+}
+
+.sidebar nav ul li {
+  margin: 10px 0; /* Espaciado entre los elementos de la lista */
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.sidebar nav ul li svg {
+  margin-right: 10px; /* Espaciado entre el icono y el texto */
+  width: 20px;
+  height: 20px;
+}
+
+/* Estilo para hacer que el contenido principal no quede debajo de la barra lateral */
+main {
+  margin-left: 250px; /* Añade un margen izquierdo para que no se solape con la barra lateral */
+  padding: 20px; /* Espaciado dentro del área principal */
+}

@@ -5,7 +5,6 @@
   left: 0; /* Se posiciona a la izquierda */
   width: 250px; /* Ajusta el ancho de la barra lateral */
   height: fit-content; /* Hace que ocupe toda la altura de la pantalla */
-  color: black; /* Color del texto */
   padding: 20px; /* Espaciado interno */
   box-sizing: border-box; /* Asegura que el padding no afecte al tamaño total */
   z-index: 1000; /* Asegura que la barra lateral se superponga al contenido */
@@ -40,3 +39,5 @@ main {
   margin-left: 250px; /* Añade un margen izquierdo para que no se solape con la barra lateral */
   padding: 20px; /* Espaciado dentro del área principal */
 }
+.links{text-decoration: none;
+color: black;}

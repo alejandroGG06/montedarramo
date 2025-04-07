@@ -22,9 +22,9 @@ import { Injectable } from '@angular/core';
 ]
 
   empleados: any = [
-    {nombre: 'carlos', apellido: 'rodriguez', correo: 'carlosR@montedarramo.com', foto: 'assents/n1.png'},
-    {nombre: 'ana', apellido: 'pacheco', correo: 'anaP@montedarramo.com', foto: 'assents/n1.png'},
-    {nombre: 'camila', apellido: 'sanchez', correo: 'camiS@montedarramo.com', foto: 'assents/n1.png'}
+    {nombre: 'carlos', apellido: 'rodriguez', correo: 'carlosR@montedarramo.com',roll:'Senior developer' ,foto: 'assents/n1.png'},
+    {nombre: 'ana', apellido: 'pacheco', correo: 'anaP@montedarramo.com',roll:'Data analyst', foto: 'assents/n1.png'},
+    {nombre: 'camila', apellido: 'sanchez', correo: 'camiS@montedarramo.com',roll:"Senior developer", foto: 'assents/n1.png'}
   ];
 
 

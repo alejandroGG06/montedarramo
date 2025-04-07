@@ -16,36 +16,7 @@ body {
   display: flex;
 }
 
-.sidebar {
-  background-color: #f8f8f8;
-  width: 220px;
-  padding: 20px;
-  height: 100vh;
-  border-right: 1px solid #ddd;
-}
 
-.sidebar h2 {
-  font-size: 18px;
-  margin-bottom: 20px;
-}
-
-.sidebar ul {
-  list-style: none;
-  padding: 0;
-}
-
-.sidebar li {
-  margin: 15px 0;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  cursor: pointer;
-}
-
-.icon {
-  width: 40px;
-  height: 40px;
-}
 
 /* Main content */
 .main-content {

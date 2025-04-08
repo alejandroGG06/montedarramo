@@ -1,0 +1,48 @@
+<div class="calendario">
+  <div class="encabezado-calendario">
+    <button class="boton-navegacion" (click)="mesAnterior()">‹</button>
+    <h2>{{ nombreMes }}</h2>
+    <button class="boton-navegacion" (click)="mesSiguiente()">›</button>
+  </div>
+
+  <div class="grid-calendario">
+    <div class="dias-semana">
+      <div *ngFor="let dia of diasSemana" class="dia-semana">
+        {{ dia }}
+      </div>
+    </div>
+
+    <div class="dias-mes">
+      <div *ngFor="let semana of semanas" class="semana-calendario">
+        <div *ngFor="let dia of semana"
+             class="dia-calendario"
+             [class.hoy]="dia && esHoy(dia)"
+             [class.seleccionado]="dia && estaSeleccionado(dia)"
+             [class.otro-mes]="dia && !esMesActual(dia)"
+             (click)="seleccionarFecha(dia!)">
+          <div class="numero-dia">{{ dia?.getDate() }}</div>
+          <div class="puntos-eventos">
+            <div *ngFor="let evento of getEventosParaFecha(dia)"
+                 class="punto-evento"
+                 [style.backgroundColor]="evento.color"
+                 (click)="$event.stopPropagation(); eliminarEvento(evento.id)">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="formulario-evento" *ngIf="fechaSeleccionada()">
+    <h3>Añadir reunión para el {{ fechaSeleccionada() | date:'dd/MM/yyyy' }}</h3>
+    <input type="text"
+           [(ngModel)]="nuevoTituloReunion"
+           placeholder="Título de la reunión"
+           (keyup.enter)="agregarEvento()">
+
+    <!-- Time input (hora) -->
+    <input type="time" [(ngModel)]="horaReunion" placeholder="Hora" required>
+
+    <button (click)="agregarEvento()">Añadir</button>
+  </div>
+</div>

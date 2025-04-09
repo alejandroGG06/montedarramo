@@ -1,52 +1,100 @@
-/* Estilos para la barra lateral */
-.container {
-  position: relative;
-}
-
+/* Estilos generales de la barra lateral */
 .sidebar {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
-  width: 250px;
-  height: 100%;
-  color: rgb(0, 0, 0);
-  z-index: 0; /* Barra lateral está debajo del contenido */
+  width: 280px;
+  height: 100vh;
+  background: linear-gradient(135deg, #ffffff 0%, #f5f9ff 100%);
+  box-shadow: 4px 0 15px rgba(0, 98, 204, 0.1);
+  z-index: 1000;
+  transition: all 0.3s ease;
+  overflow-y: auto;
+  padding: 20px 0;
 }
 
-.content {
-  position: absolute; 
-  top: 0;
-  left: 0;
-  right: 0;
-  padding: 20px;
-  z-index: 1; /* El contenido está por encima de la barra lateral */
+.sidebar-header {
+  padding: 0 25px 20px;
+  border-bottom: 1px solid rgba(0, 122, 255, 0.1);
 }
 
 .sidebar h2 {
-  margin-top: 0;
-  color:black;
+  color: #0062CC;
+  font-size: 1.5rem;
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
-/* Estilo para los elementos de la lista de navegación */
-.sidebar nav ul {
-  list-style-type: none; /* Elimina los puntos de las listas */
-  padding-left: 0;
+/* Menú de navegación */
+.nav-menu {
+  list-style: none;
+  padding: 15px 0;
+  margin: 0;
 }
 
-.sidebar nav ul li {
-  margin: 10px 0; /* Espaciado entre los elementos de la lista */
+.nav-item {
+  margin: 5px 0;
+  position: relative;
+}
+
+.nav-link {
   display: flex;
   align-items: center;
-  cursor: pointer;
+  padding: 12px 25px;
+  color: #333;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border-left: 3px solid transparent;
 }
 
-.sidebar nav ul li svg {
-  margin-right: 10px; /* Espaciado entre el icono y el texto */
-  width: 20px;
-  height: 20px;
+.nav-link:hover {
+  background-color: rgba(0, 122, 255, 0.05);
+  color: #007AFF;
+  border-left: 3px solid #007AFF;
 }
 
-/* Estilo para hacer que el contenido principal no quede debajo de la barra lateral */
+.nav-link.active {
+  background-color: rgba(0, 122, 255, 0.1);
+  color: #0062CC;
+  border-left: 3px solid #0062CC;
+  font-weight: 500;
+}
 
-.links{text-decoration: none;
-color: black;}
+.nav-icon {
+  width: 22px;
+  height: 22px;
+  margin-right: 15px;
+  fill: currentColor;
+  stroke: currentColor;
+  flex-shrink: 0;
+}
+
+.nav-text {
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+/* Solución al problema de desplazamiento */
+.main-content {
+  margin-left: 280px; /* Igual al ancho de la sidebar */
+  width: calc(100% - 280px);
+  transition: margin-left 0.3s ease;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+    width: 260px;
+  }
+
+  .sidebar.active {
+    transform: translateX(0);
+  }
+
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+  }
+}

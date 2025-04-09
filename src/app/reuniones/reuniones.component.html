@@ -9,9 +9,9 @@
           <h3>Reuniones del día</h3>
           <hr class="card-separator" />
 
-          <div *ngIf="reuniones.length > 0; else noReuniones">
+          <div *ngIf="reunionesDiarias.length > 0; else noReuniones">
             <ul class="reunion-list">
-              <li *ngFor="let reunion of reuniones" class="reunion-item">
+              <li *ngFor="let reunion of reunionesDiarias" class="reunion-item" (click)="eliminarReunionClick(reunion.id)">
                 <div class="reunion-content">
                   <svg class="reunion-icon" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                     <title>Reunion</title>
@@ -29,7 +29,7 @@
                   </svg>
                   <div class="reunion-text">
                     <p class="reunion-title">{{ reunion.titulo }}</p>
-                    <p class="reunion-datetime">{{ reunion.fecha | date:'dd/MM/yyyy' }} | {{ reunion.hora }}</p>
+                    <p class="reunion-datetime">{{ reunion.fecha | date:'dd/MM/yyyy' }} | {{ formatTime(reunion.hora) }}</p>
                   </div>
                 </div>
               </li>

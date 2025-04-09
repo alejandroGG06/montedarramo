@@ -1,31 +1,34 @@
 <div class="work-controls">
   <!-- Jornada Section -->
   <div class="timeline-block">
-    <button class="dark-btn" (click)="startWork()">Empezar</button>
+    <!-- Botón "Empezar" / "Trabajando" -->
+    <button class="dark-btn" (click)="startWork()">{{ botonTrabajoTexto }}</button>
     <div class="timeline">
       <div class="timeline-labels">
         <span>Inicio Jornada</span>
         <span>Fin Jornada</span>
       </div>
       <div class="timeline-line">
-        <progress [value]="workProgress" [max]="workHours*3600" class="progres"></progress>
+        <progress [value]="workProgress" [max]="workHours * 3600" class="progres"></progress>
       </div>
-      <p class="timeline-desc">Al pulsar el boton empieza tu jornada, una vez finalizada se termina automaticamente y salta una notificación</p>
+      <p class="timeline-desc">Al pulsar el botón empieza tu jornada, una vez finalizada se termina automáticamente y salta una notificación.</p>
     </div>
   </div>
 
   <!-- Pausa Section -->
   <div class="timeline-block">
-    <button class="dark-btn" (click)="startBreak()">Pausa</button>
+    <!-- Botón "Pausa" / "Descansando" / "Reanudar" -->
+    <button class="dark-btn" (click)="startBreak()">{{ botonPausaTexto }}</button>
     <div class="timeline">
       <div class="timeline-labels">
         <span>Inicio pausa</span>
         <span>Fin pausa</span>
       </div>
       <div class="timeline-line">
-      <progress [value]="breakProgress" [max]="breakHours *3600" class="progres"></progress>
+        <progress [value]="breakProgress" [max]="breakHours * 3600" class="progres"></progress>
       </div>
-      <p class="timeline-desc">Tiempo utilizado para la pausa</p>
+      <p class="timeline-desc">Tiempo utilizado para la pausa.</p>
     </div>
   </div>
 </div>
+

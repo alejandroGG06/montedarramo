@@ -18,7 +18,7 @@ export class Trabajoservice {
 
   workProgress$ = this.workProgress.asObservable();
   breakProgress$ = this.breakProgress.asObservable();
-  
+
   startWork() {
     //this.resetProgress();
     this.clearTrabajo();

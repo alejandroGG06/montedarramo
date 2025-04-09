@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 @Injectable({
     providedIn: 'root'
   })
-  export class EmpleadoService {  
-    
+  export class EmpleadoService {
+
     empleado :any = [
         {
     nombre: 'alejandro',
@@ -22,9 +22,9 @@ import { Injectable } from '@angular/core';
 ]
 
   empleados: any = [
-    {nombre: 'carlos', apellido: 'rodriguez', correo: 'carlosR@montedarramo.com',roll:'Senior developer' ,foto: 'assents/n1.png'},
-    {nombre: 'ana', apellido: 'pacheco', correo: 'anaP@montedarramo.com',roll:'Data analyst', foto: 'assents/n1.png'},
-    {nombre: 'camila', apellido: 'sanchez', correo: 'camiS@montedarramo.com',roll:"Senior developer", foto: 'assents/n1.png'}
+    {nombre: 'Carlos', apellido: 'Rodríguez', correo: 'carlos.rodriguez@montedarramo.com',roll:'Senior developer' ,foto: 'assents/n1.png'},
+    {nombre: 'Ana', apellido: 'Pacheco', correo: 'ana.pacheco@montedarramo.com',roll:'Data analyst', foto: 'assents/n1.png'},
+    {nombre: 'Camila', apellido: 'Sánchez', correo: 'camila.sanchez@montedarramo.com',roll:"Senior developer", foto: 'assents/n1.png'}
   ];
 
 
@@ -41,7 +41,7 @@ import { Injectable } from '@angular/core';
 
 
   }
- 
+
   constructor() { }
 
 

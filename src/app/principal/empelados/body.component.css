@@ -59,8 +59,6 @@ body {
   display: flex;
 }
 
-
-
 /* Main content */
 .main-content {
   flex: 1;
@@ -89,13 +87,14 @@ body {
 .avatar-large {
   width: 100px;
   height: 100px;
-  border: 2px solid black;
+  border: 3px solid #007AFF;
   border-radius: 50%;
 }
 
 /* Card style */
 .card {
   border: 1px solid #d9d9d9;
+  border-top: 3px solid #007AFF;
   border-radius: 8px;
   padding: 15px;
   width: fit-content;
@@ -111,6 +110,7 @@ body {
 
 .team-card {
   border: 1px solid #ddd;
+  border-top: 3px solid #007AFF;
   border-radius: 10px;
   padding: 15px;
   text-align: center;
@@ -138,4 +138,10 @@ body {
 
 .emp-desc {
   color: #979393;
+}
+
+.icon {
+  fill: #007AFF;
+  height: 48px;
+  width: 48px;
 }

@@ -2,8 +2,9 @@
     text-align: center;
     font-family: Arial, sans-serif;
   }
-  
+
   .login-box {
+    border-top: 3px solid #007AFF;
     width: 300px;
     margin: auto;
     padding: 20px;
@@ -11,33 +12,32 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background: #fff;
   }
-  
+
   .input-field {
-    width: 100%;
+    width: 93%;
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
   }
-  
+
   .login-button {
     width: 100%;
     padding: 10px;
-    background: black;
+    background-color: #007AFF;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
   }
-  
+
   .recover-link {
     display: block;
     margin-top: 10px;
     color: #007bff;
     text-decoration: none;
   }
-  
+
   .recover-link:hover {
     text-decoration: underline;
   }
-  

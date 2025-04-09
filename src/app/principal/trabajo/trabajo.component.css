@@ -6,6 +6,8 @@
   flex-wrap: wrap;
 }
 
+.progres{width: 100%;}
+
 .timeline-block {
   display: flex;
   align-items: flex-start;

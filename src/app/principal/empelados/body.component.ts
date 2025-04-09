@@ -18,10 +18,17 @@ export class empleadoscomponent {
 
   empleado:any= null;
 
-  workHours: number = 8; // Puedes cambiar esto según tu lógica
-  breakHours: number = 1; // 
+  workHours: any = 8; // Puedes cambiar esto según tu lógica
+  breakHours: any = 1; // 
 
-   
+  formatHoras(minutosTotales: number): string {
+    const horas = Math.floor(minutosTotales / 60);
+    const minutos = Math.floor(minutosTotales % 60);
+    const horasStr = horas < 10 ? '0' + horas : horas.toString();
+    const minutosStr = minutos < 10 ? '0' + minutos : minutos.toString();
+    return `${horasStr}:${minutosStr}`;
+  }
+  
 
   constructor(private empleadoService: EmpleadoService, private Trabajoservice:Trabajoservice) { }
   
@@ -32,15 +39,18 @@ export class empleadoscomponent {
     this.empleado=this.empleadoService.getEmpleado();
 
     this.Trabajoservice.workProgress$.subscribe(() => {
-      this.workHours = this.Trabajoservice.getRemainingWorkHours();
-      console.log('Horas de trabajo restantes:', this.workHours);
+      const horas = this.Trabajoservice.getRemainingWorkHours();
+      const minutosTotales = horas * 60;
+      this.workHours = this.formatHoras(minutosTotales);
     });
+    
 
     // Suscribirse a los cambios en el progreso de descanso
     this.Trabajoservice.breakProgress$.subscribe(() => {
-      this.breakHours = this.Trabajoservice.getRemainingBreakHours();
-      console.log('Horas de descanso restantes:', this.breakHours);
-    });
+      const horas = this.Trabajoservice.getRemainingBreakHours();
+      const minutosTotales = horas * 60;
+      this.breakHours = this.formatHoras(minutosTotales);
+});
   
     
   }

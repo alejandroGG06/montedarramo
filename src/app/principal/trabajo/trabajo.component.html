@@ -8,7 +8,7 @@
         <span>Fin Jornada</span>
       </div>
       <div class="timeline-line">
-        <progress [value]="workProgress" [max]="workHours*3600"></progress>
+        <progress [value]="workProgress" [max]="workHours*3600" class="progres"></progress>
       </div>
       <p class="timeline-desc">Al pulsar el boton empieza tu jornada, una vez finalizada se termina automaticamente y salta una notificación</p>
     </div>
@@ -23,7 +23,7 @@
         <span>Fin pausa</span>
       </div>
       <div class="timeline-line">
-      <progress [value]="breakProgress" [max]="breakHours *3600"></progress>
+      <progress [value]="breakProgress" [max]="breakHours *3600" class="progres"></progress>
       </div>
       <p class="timeline-desc">Tiempo utilizado para la pausa</p>
     </div>

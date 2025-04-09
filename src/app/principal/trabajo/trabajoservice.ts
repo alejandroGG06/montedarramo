@@ -13,11 +13,15 @@ export class Trabajoservice {
   private breakProgress = new BehaviorSubject<number>(0);
   private timer: any;
 
+  private intervaloTrabajo: any;
+  private intervaloPausa: any;
+
   workProgress$ = this.workProgress.asObservable();
   breakProgress$ = this.breakProgress.asObservable();
-
+  
   startWork() {
-    this.resetProgress();
+    //this.resetProgress();
+    this.clearTrabajo();
     this.timer = interval(1000).subscribe(() => {
       if (this.workProgress.value < this.workHours * 3600) {
         this.workProgress.next(this.workProgress.value + 1);
@@ -27,8 +31,15 @@ export class Trabajoservice {
     });
   }
 
+  private clearTrabajo(){
+    clearInterval(this.intervaloTrabajo)
+    this.intervaloTrabajo=null;
+  }
+
+
   startBreak() {
-    this.resetProgress();
+      //this.resetProgress();
+    this.clearPause();
     this.timer = interval(1000).subscribe(() => {
       if (this.breakProgress.value < this.breakHours * 3600) {
         this.breakProgress.next(this.breakProgress.value + 1);
@@ -36,6 +47,11 @@ export class Trabajoservice {
         this.stop();
       }
     });
+  }
+
+  private clearPause(){
+    clearInterval(this.intervaloPausa);
+    this.intervaloPausa=null;
   }
 
   stop() {

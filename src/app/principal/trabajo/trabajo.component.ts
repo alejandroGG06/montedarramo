@@ -9,6 +9,7 @@ import { Trabajoservice } from './trabajoservice';
 })
 export class TrabajoComponent {
 
+
   workProgress: number = 0;
   breakProgress: number = 0;
   workHours: number = 8; // Horas de trabajo
@@ -25,11 +26,12 @@ export class TrabajoComponent {
     });
   }
   startWork() {
+  
     this.Trabajoservice.startWork();
   }
 
-  startBreak() {
-    this.Trabajoservice.startBreak();
-  }
+    startBreak() {
+      this.Trabajoservice.startBreak();
+    }
 
 }

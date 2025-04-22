@@ -32,7 +32,6 @@ body {
   padding: 15px;
   width: 300px;
   text-align: center;
-  border-top: 3px solid #007AFF;
 }
 
 .card-separator {
@@ -40,7 +39,6 @@ body {
   border: none;
   border-top: 1px solid #ccc;
   margin: 1rem 0;
-  border-color: rgba(0, 122, 255, 0.1);
 }
 
 .reunion-list {
@@ -58,7 +56,6 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
-  border-left: 3px solid #007AFF;
 }
 
 .reunion-icon {
@@ -67,7 +64,6 @@ body {
   flex-shrink: 0;
   fill: #007AFF;
   margin-bottom: 45px;
-  margin-left: 5px
 }
 
 .reunion-text {

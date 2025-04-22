@@ -3,13 +3,14 @@ import { provideRouter } from '@angular/router';
 import { SesionComponent } from './sesion/sesion.component';
 import { empleadoscomponent } from './principal/empelados/body.component';
 import { AdministracionComponent } from './administracion/administracion.component';
-import { ReunionesComponent } from './reuniones/reuniones.component';
-
+import { ReunionesComponent } from './reunion/reuniones/reuniones.component';
+import { HorariosComponent } from './horario/horarios/horarios.component';
 export const routes: Routes = [
     { path: 'sesion', component: SesionComponent },
     { path: 'empleados', component: empleadoscomponent },
     { path: 'administracion', component: AdministracionComponent },
     { path: 'reuniones', component: ReunionesComponent },
+    { path: 'horarios',component:HorariosComponent},
     { path: '', redirectTo: '/sesion', pathMatch: 'full' } // Redirección por defecto
 ];
 

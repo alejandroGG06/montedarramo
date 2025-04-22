@@ -1,0 +1,21 @@
+<div class="kanban-board">
+    <div class="column" *ngFor="let status of statuses">
+      <h3>{{ statusLabels[status] }}</h3>
+  
+      <!-- Tarjetas existentes -->
+      <div class="task-card" *ngFor="let task of getTasksByStatus(status)">
+        <h4>{{ task.title }}</h4>
+      </div>
+  
+      <!-- Formulario para agregar nueva tarea -->
+      <div class="new-task-form">
+        <input
+          [value]="newTaskTitles[status]"
+          (input)="onInputChange($event, status)"
+          placeholder="Nueva tarea..."
+        />
+        <button (click)="addTask(status)">Agregar</button>
+      </div>
+    </div>
+  </div>
+  

@@ -5,7 +5,7 @@ import { SesionComponent } from "../../sesion/sesion.component";
 import { TareasComponent } from "../tareas/tareas.component";
 @Component({
   selector: 'app-horarios',
-  imports: [HeadComponent, CalendarComponent, SesionComponent, TareasComponent],
+  imports: [HeadComponent, CalendarComponent, TareasComponent],
   templateUrl: './horarios.component.html',
   styleUrl: './horarios.component.css'
 })

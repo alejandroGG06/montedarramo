@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 @Table(name = "empleados")
 public class Empleado {
 
-  @jakarta.persistence.Id
+  @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   @Column(name = "id")
   private Integer id;

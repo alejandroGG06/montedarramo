@@ -6,7 +6,6 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.RequiredArgsConstructor;
 import lombok.NoArgsConstructor;
-import org.springframework.data.annotation.Id;
 import java.time.LocalTime;
 
 @Getter
@@ -16,7 +15,7 @@ import java.time.LocalTime;
 @Table(name = "sesiones_trabajo")
 public class SesionTrabajo {
 
-  @jakarta.persistence.Id
+  @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   @Column(name = "id")
   private Integer id;

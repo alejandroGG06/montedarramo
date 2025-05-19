@@ -16,7 +16,7 @@ import java.util.Date;
 @Table(name = "jornada")
 public class Jornada {
 
-  @jakarta.persistence.Id
+  @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   @Column(name = "id")
   private Integer id;

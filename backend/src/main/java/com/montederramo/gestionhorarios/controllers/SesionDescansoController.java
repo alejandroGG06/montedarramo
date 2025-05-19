@@ -98,7 +98,7 @@ public class SesionDescansoController {
    */
   @PutMapping("/{id}")
   public ResponseEntity<SesionDescanso> actualizarSesionDescanso(@Valid @PathVariable Integer id, @RequestBody SesionDescanso sesionDescanso) {
-    SesionDescanso updatedSesionDescanso = sesionDescansoService.actualizarSesionDescanso(id, sesion de descanso);
+    SesionDescanso updatedSesionDescanso = sesionDescansoService.actualizarSesionDescanso(id, sesionDescanso);
     if (updatedSesionDescanso != null) {
       return new ResponseEntity<>(updatedSesionDescanso, HttpStatus.OK); // 200 OK
     }

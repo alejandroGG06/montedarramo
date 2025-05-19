@@ -7,6 +7,7 @@ import lombok.Setter;
 import lombok.RequiredArgsConstructor;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
+import java.time.LocalTime;
 
 @Getter
 @Setter
@@ -20,14 +21,14 @@ public class SesionDescanso {
   @Column(name = "id")
   private Integer id;
 
-  @Column(name = "id_jornada)
+  @Column(name = "id_jornada")
   private Integer idJornada;
 
   @Column(name = "tiempo_inicio")
-  private DateTime tiempoInicio;
+  private LocalTime tiempoInicio;
 
   @Column(name = "tiempo_fin")
-  private DateTime tiempoFin;
+  private LocalTime tiempoFin;
 
   public void setId(Integer id) {
     this.id = id;

@@ -7,6 +7,7 @@ import lombok.Setter;
 import lombok.RequiredArgsConstructor;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
+import java.util.Date;
 
 @Getter
 @Setter
@@ -23,10 +24,10 @@ public class Tarea {
   @Column(name = "fecha")
   private Date fecha;
 
-  @column(name = "titulo")
+  @Column(name = "titulo")
   private String titulo;
  
-  @column(name = "estado")
+  @Column(name = "estado")
   private String estado;
 
   public void setId(Integer id) {

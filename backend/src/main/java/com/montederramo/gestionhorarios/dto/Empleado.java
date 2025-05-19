@@ -6,7 +6,6 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.RequiredArgsConstructor;
 import lombok.NoArgsConstructor;
-import org.springframework.data.annotation.Id;
 
 @Getter
 @Setter
@@ -42,3 +41,4 @@ public class Empleado {
     this.id = id;
   }
 }
+

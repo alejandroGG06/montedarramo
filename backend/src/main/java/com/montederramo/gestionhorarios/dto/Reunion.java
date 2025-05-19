@@ -7,6 +7,7 @@ import lombok.Setter;
 import lombok.RequiredArgsConstructor;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
+import java.util.Date;
 
 @Getter
 @Setter
@@ -21,9 +22,9 @@ public class Reunion {
   private Integer id;
 
   @Column(name = "fecha")
-  private DateTime fecha;
+  private Date fecha;
 
-  @column(name = "titulo")
+  @Column(name = "titulo")
   private String titulo;
 
   public void setId(Integer id) {

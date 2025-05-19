@@ -98,7 +98,7 @@ public class SesionTrabajoController {
    */
   @PutMapping("/{id}")
   public ResponseEntity<SesionTrabajo> actualizarSesionTrabajo(@Valid @PathVariable Integer id, @RequestBody SesionTrabajo sesionTrabajo) {
-    SesionTrabajo updatedSesionTrabajo = sesionTrabajoService.actualizarSesionTrabajo(id, sesion de trabajo);
+    SesionTrabajo updatedSesionTrabajo = sesionTrabajoService.actualizarSesionTrabajo(id, sesionTrabajo);
     if (updatedSesionTrabajo != null) {
       return new ResponseEntity<>(updatedSesionTrabajo, HttpStatus.OK); // 200 OK
     }

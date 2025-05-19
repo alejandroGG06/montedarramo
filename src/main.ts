@@ -1,8 +1,9 @@
+// filepath: /home/k4ts0v/Montederramo/Angular/montedarramo/src/main.ts
 import { bootstrapApplication } from '@angular/platform-browser';
-import { AppComponent } from './app/app.component';
-import { provideRouter } from '@angular/router';
-import { routes } from './app/app.routes';
+import { provideHttpClient } from '@angular/common/http'; // Import this
+import { AppComponent } from './app/app.component'; // Or your standalone root component
+import { appConfig } from './app/app.config'; // If you have app.config.ts
 
-bootstrapApplication(AppComponent, {
-  providers: [provideRouter(routes)]
-}).catch(err => console.error(err));
+// If app.config.ts already includes provideHttpClient(), this is simpler:
+bootstrapApplication(AppComponent, appConfig)
+  .catch((err) => console.error(err));

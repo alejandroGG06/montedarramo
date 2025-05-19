@@ -13,9 +13,9 @@ export class SesionComponent {
   usuario = '';
   password = '';
   error = '';
-  
 
-  
+
+
   constructor(private router: Router,  private empleadoService: EmpleadoService) {}
 
   login() {
@@ -28,7 +28,6 @@ export class SesionComponent {
     }
   }
 
-  }
-
+}
 
 

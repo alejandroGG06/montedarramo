@@ -1,0 +1,33 @@
+<form [formGroup]="formEmpleado" (ngSubmit)="onSubmit()">
+  <div>
+    <label>Nombre:</label>
+    <input type="text" formControlName="nombre">
+  </div>
+
+  <div>
+    <label>Apellido:</label>
+    <input type="text" formControlName="apellido">
+  </div>
+
+  <div>
+    <label>Correo:</label>
+    <input type="email" formControlName="correo">
+  </div>
+
+  <div>
+    <label>Rol:</label>
+    <input type="text" formControlName="rol">
+  </div>
+
+  <div>
+    <label>Equipo:</label>
+    <input type="text" formControlName="equipo">
+  </div>
+
+  <div>
+    <label>Foto URL:</label>
+    <input type="text" formControlName="fotoUrl">
+  </div>
+
+  <button type="submit">Crear Empleado</button>
+</form>

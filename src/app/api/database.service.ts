@@ -12,7 +12,7 @@ import { Observable } from 'rxjs';
 })
 export class DatabaseService {
   // URL base para todas las llamadas API.
-  private apiUrl = 'https://your-mysql-cloud-instance-api.com/api'; // TODO: Cambiar esto por la URL de la API.
+  private apiUrl = 'https://gestionhorarios/api'; // TODO: Cambiar esto por la URL de la API.
 
   // Inyección del servicio HttpClient para realizar peticiones HTTP
   constructor(private http: HttpClient) { }
